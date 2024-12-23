@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable.js Drag and Drop</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script> -->
+    <script src="Sortable.min.js"></script>
+</head>
+<body>
+    <div class="nav-container">
+        <h1>Drag and Drop Demo</h1>
+        <!-- 可選元件列表 -->
+        <div id="component-list">
+            <div class="component" data-type="button">A</div>
+            <div class="component" data-type="button">B</div>
+            <div class="component" data-type="button">C</div>
+            <div class="component" data-type="button">D</div>
+            <div class="component" data-type="button">E</div>
+            <div class="component" data-type="button">IF</div>
+            <div class="component" data-type="button">ELSE</div>
+            <div class="component" data-type="button">ELSE IF</div>
+            <div class="component" data-type="input">Input</div>
+        </div>
+        <button class="save">Save</button>
+    </div>
+    <!-- 拖放區域 -->
+    <p>Drag components here</p>
+    <div id="canvas">
+    </div>
+
+    <script src="scripts.js" defer></script>
+</body>
+</html>

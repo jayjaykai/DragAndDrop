@@ -1,0 +1,157 @@
+* {
+    font-family: "Noto Sans TC", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #b1afaf;
+    z-index: 1000;
+    margin: 0 auto;
+    padding: 10px 10px;
+}
+
+p{
+    margin-top: 200px;
+    padding: 5px 5px;
+}
+
+#component-list {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+}
+
+.component {
+    border: 1px solid #ccc;
+    padding: 20px;
+    cursor: grab;
+    background-color: #f9f9f9;
+}
+
+#canvas {
+    border: 2px dashed #aaa;
+    padding: 20px 5px;
+    min-height: 350px;
+    margin: 0 5px;
+}
+
+.canvas-item {
+    margin-bottom: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: grab;
+    display: flex;
+}
+
+
+/* Canvas header 樣式 */
+.canvas-header {
+    background-color: #e0e0e0;
+    text-align: center;
+    border-radius: 3px;
+    padding: 30px;
+    cursor: move;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+/* 設置縮放按鈕 */
+.toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    z-index: 10;
+}
+
+/* 隱藏 .nested 區域 */
+.nested.hidden {
+    max-height: 0; /* 高度設置為 0 */
+    opacity: 0; /* 完全透明 */
+    overflow: hidden; /* 隱藏超出內容 */
+    pointer-events: none; /* 禁止點擊 */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* 過渡動畫 */
+}
+
+/* 顯示 .nested 區域 */
+.nested {
+    max-height: 500px; /* 設置為足夠大的值，確保內容顯示完全 */
+    opacity: 1; /* 完全不透明 */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* 過渡動畫 */
+    margin-top: 10px;
+    padding: 10px;
+    min-height: 30px;
+    color: #999;
+}
+/*隱藏 .nested 區域*/
+/* .nested.hidden {
+    display: none;
+} */
+
+
+/* Nested 區域樣式 */
+/* .nested {
+    margin-top: 10px;
+    padding: 10px;
+    min-height: 30px;
+    color: #999;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}  */
+
+/* Input 樣式 */
+.canvas-input {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+button {
+    display: flex; /* 使用 flex 排列 */
+    flex-direction: column; /* 元素垂直排列 */
+    align-items: center; /* 水平居中對齊 */
+    padding: 10px; /* 內邊距調整 */
+    gap: 10px; /* 元素間距 */
+    min-width: 100px; /* 最小按鈕寬度 */
+    background-color: #f0f0f0; /* 背景顏色 */
+    border: 1px solid #ccc; /* 邊框 */
+    cursor: grab; /* 拖放手型 */
+}
+
+.save {
+    margin: 0 20px;
+    padding: 10px;
+    gap: 10px;
+    min-width: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 1em;
+    border: none;
+    background-color: #008080;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button input {
+    width: 90%; /* input 寬度相對於按鈕 */
+    margin-top: 10px; /* 與文字間的間距 */
+    box-sizing: border-box; /* 包括 padding 的總寬度 */
+}
